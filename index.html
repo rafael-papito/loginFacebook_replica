@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login do Facebook</title>
+	<meta charset="utf-8"/>
+	<meta name="description" content="Descrição do meu site."/>
+	<meta name="Keywords" content="palavra,separadas,por,virgulas"/>
+	<meta name="author" content="papito"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,0"/>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Lato, sans-serif;
+		}
+		div.clear{
+			clear: both;
+		}
+		.login-mobile{
+			background-color: #3b5998;
+			display: none;
+		}
+		header{
+			width: 100%;
+			height: 60px;
+			background-color:#3b5998;
+			margin: 0 auto;
+			padding: 0 2%;
+		}
+		header h2{
+			float: left;
+			color: white;
+			font-size: 29px;
+			font-weight: normal;
+			margin-left: 150px;
+			margin-top: 10px;
+		}
+		form {
+			float: right;
+			margin-right: 200px;
+			margin-top: 10px;
+		}
+		form input[type= text]{
+			width: 150px;
+			height: 25px;
+			margin-right:16px;
+		}
+		form input[type= password]{
+			width: 150px;
+			height: 25px;
+			margin-right:16px;
+		}
+		form input[type= submit]{
+			cursor: pointer;
+			border: none;
+			background-color: #3a6cd6;
+			color: white;
+			padding: 3px 5px;
+		}
+		.inutil{
+			display: inline-block;
+			color: white;
+			font-size: 13px;
+		}
+		.inutil p{
+			margin-bottom:4px;
+		}
+		nav{
+			height: 500px;
+			background: linear-gradient(white, #D3D8E8);
+			padding: 40px 0;
+		}
+		.one{
+			width: 60%;
+			float: left;
+		}
+		.one h3{
+			max-width: 460px;
+			font-size: 20px;
+			color: #0e385f;
+			margin:0 auto;
+		}
+		.ome img{
+			max-width: 100%;
+			margin: 0 auto;
+		}
+		.two{
+			float:right;
+			width: 40%;
+		}
+		.w50{
+			width: 50%;
+			float: left;
+			padding: 5px 5px 0 0;
+		}
+		.w100{
+			width: 100%;
+			float: left;
+			padding: 5px 5px 0 0;
+		}
+		form.criar-conta select.nascimento{
+			font-size: 18px;
+			float: left;
+			padding: 5px 10px;
+			border: 1px solid #ccd0d5;
+			border-radius: 5px;
+			outline: none;
+			margin-top: 5px;
+		}
+		form.criar-conta input{
+			width: 100%;
+		}
+		form.criar-conta input[type=email], 
+		form.criar-conta input[type=text],
+		form.criar-conta input[type=password]{
+			font-size: 18px;
+			height: 45px;
+			max-width: 500px;
+			padding: 8px 10px;
+			border: 1px solid #ccd0d5;
+			border-radius: 5px;
+			outline: none;
+		}
+		form.criar-conta input[type=submit]{
+			background: linear-gradient(#67ae55, #578843);
+			background-color: #69a74e;
+			border: 1px solid;
+			border-radius: 5px;
+			color: #fff;
+			cursor: pointer;
+			padding: 10px;
+			font-size: 18px;
+		}
+		form.criar-conta input[type=submit]:hover{
+			background-color: #67ae55;
+			background: linear-gradient(#81d66c, #75b85b);
+		}
+		form.criar-conta .input-radio{
+			display: inline-block;
+			padding: 0 10px 0 0;
+			margin: 0 0 15px 0;
+		}
+		form.criar-conta .input-radio label{
+			display: inline-block;
+			padding: 5px 5px 0 0;
+		}
+		form.criar-conta .input-radio input[type=radio]{
+			width: auto !important; 
+			display: inline-block;
+		}
+		footer{
+			text-align: center;
+			border-top: 2px solid black;
+		}
+		@media screen and (max-width: 580px){
+			.login-desktop{
+				display: none;
+			}
+			.login-mobile{
+				display: block;
+			}
+			.login-mobile h2{
+				text-align: center;
+				color: white;
+			}
+			.container{
+				max-width: 350px;
+			}
+			form{
+				width: 100%;
+				margin:0 auto;
+				padding: 47% 5%;
+			}
+			form input[type=password]{
+				width: 100%;
+				height: 35px;
+				line-height: 35px;
+				padding-left: 9px;
+				margin-top: 30px;
+				margin-left: 50px;
+			}
+			form input[type=email]{
+				width: 100%;
+				height: 35px;
+				line-height: 35px;
+				padding-left: 9px;
+				margin-left: 50px;
+			}
+			form input[type=submit]{
+				width: 100px;
+				display: inline-block;
+				height: 35px;
+				border: 0;
+				margin-top: 20px;
+				margin-left: 150px;
+				background:#3a6cd6;
+				color: white;
+				cursor: pointer;
+			}
+		}
+	</style>
+</head>
+	<body>
+		<div class="login-desktop">
+			<header>
+				<h2>Facebook</h2>
+				<form class="login">
+					<div class="inutil">
+						<p>Email ou Telefone:<p>
+						<input type="text" value="" name="" placeholder=""> 
+					</div><!--inutil-->
+					<div class="inutil">
+						<p>Senha:<p>
+						<input type="password" value="" name="" placeholder=""> 
+					</div><!--inutil-->
+					<div class="inutil">
+						<input type="submit" value="Enviar">
+					</div><!--inutil-->
+					<div class="clear"></div>
+				</form>
+				<div class="clear"></div>
+			</header>
+			<nav>
+				<section class="one">
+					<h3>O Facebook ajuda você a se conectar e
+						<br>
+					compartilhar com as pessoas que fazem parte da
+					sua vida.</h3>
+						<img src="imagem/img1.png">
+				</section><!--one-->
+				<section class="two">
+					<h2>Abra uma conta</h2>
+					<h3>É Rapído e Facil</h3>
+					<form class="criar-conta">
+						<div class="w50">
+							<Input type="text" value="" name="" placeholder="Nome">
+						</div><!--w50-->
+						<div class="w50">
+							<Input type="text" value="" name="" placeholder="Sobrenome">
+						</div><!--w50-->
+						<div class="w100">
+							<Input type="text" value="" name="" placeholder="Email">
+						</div><!--w100-->
+						<div class="w100">
+							<Input type="password" value="" name="" placeholder="Senha">
+						</div><!--w100-->
+						<div class="w100">
+							<h4>Mês de Nascimento</h4>
+							<select name="nascimento-dia" id="data" class="nascimento">
+								<?php
+									for ($i=1; $i < 31 ; $i++) {
+								?>
+									<option value="<?php echo $i; ?>"><?php echo $i; ?>1</option>
+									<option value="<?php echo $i; ?>"><?php echo $i; ?>2</option>
+									<option value="<?php echo $i; ?>"><?php echo $i; ?>3</option>
+									<option value="<?php echo $i; ?>"><?php echo $i; ?>4</option>
+									<option value="<?php echo $i; ?>"><?php echo $i; ?>5</option>
+								<?php } ?>
+							</select>
+							<select name="nascimento-mes" id="data" class="nascimento">
+								<option value="1">Janeiro</option>
+								<option value="2">Fevereiro</option>
+								<option value="3">Março</option>
+								<option value="4">Abril</option>
+								<option value="5">Maio</option>
+								<option value="6">Junho</option>
+								<option value="7">Julho</option>
+								<option value="8">Agosto</option>
+								<option value="9">Setembro</option>
+								<option value="10">Outubro</option>
+								<option value="11">Novembro</option>
+								<option value="12">Dezembro</option>
+							</select>
+							<select name="nascimento-ano" id="data" class="nascimento">
+								<?php
+									for ($i=1940; $i <= 2002 ; $i++) {
+								?>
+									<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+								<?php } ?>
+							</select>
+							<div class="w100">
+								<h3>Gênero</h3>
+								<div class="input-radio">
+									<input type="radio" value="masculino" name="sexo" id="">
+									<label for="">Masculino</label>
+								</div><!--input-radio-->
+								<div class="input-radio">
+									<input type="radio" value="feminino" name="sexo" id="">
+									<label for="">Feminino</label>
+								</div><!--input-radio-->
+								<div class="input-radio">
+									<input type="radio" value="personalizado" name="sexo" id="">
+									<label for="">Personalizado</label>
+								</div><!--input-radio-->
+							</div><!--w100-->
+						</div><!--w100-->
+						<div class="w50">
+							<input type="submit" value="Cadastre-se">
+						</div><!--w50-->
+						<div class="clear"></div>
+					</form>
+				</section>
+			</nav>
+			<footer>
+				<h4>Todos os sireitos desse desastre de 
+					<br>
+					replia pertencem a Papito.dev</h4>
+			</footer>
+		</div>
+		<div class="login-mobile" >
+			<div class="container">
+			<h2>Facebook</h2>
+				<form>
+					<input type="email" placeholder="Email">
+					<input type="password"placeholder="Senha">
+					<input type="submit" value="Login">
+				</form>
+			</div>
+		</div>
+		<script>
+			window(
+    		alert("Esse projeto é única e exclusivamente 'demonstrativo', em nenhuma circunstância deve ser usado de maneira comercial e/ou Monetizada. 😁 Obrigado! OBS:esse projeto não está responsivo.")
+			)
+		</script>
+	</body>
+</html>
